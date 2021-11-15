@@ -15,7 +15,7 @@ runs:
   steps:
     - name: Extract 
       shell: bash
-      run: echo "BRANCH_NAME=$(echo ${{ github.ref_name }} | tr / -)" >> $GITHUB_ENV
+      run: echo "BRANCH_NAME=$(echo '${{ github.ref_name }}' | tr \/ -)" >> $GITHUB_ENV
 
     - name: Build Docker image
       shell: bash
