@@ -23,6 +23,6 @@ runs:
         docker build \
         --build-arg NPM_TOKEN=${{ inputs.interdiscount-coop-user-pw }} \
         -t ghcr.io/interdiscount/${{ inputs.image-name }}:sha-${GITHUB_SHA::9} \
-        -t ghcr.io/interdiscount/${{ inputs.image-name }}:${ env.BRANCH_NAME }-${GITHUB_SHA::9} \
-        -t ghcr.io/interdiscount/${{ inputs.image-name }}:${ env.BRANCH_NAME }-latest \
+        -t ghcr.io/interdiscount/${{ inputs.image-name }}:${{ env.BRANCH_NAME }}-${GITHUB_SHA::9} \
+        -t ghcr.io/interdiscount/${{ inputs.image-name }}:${{ env.BRANCH_NAME }}-latest \
         .
