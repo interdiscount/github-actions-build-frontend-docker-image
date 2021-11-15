@@ -14,7 +14,7 @@ Builds a Docker image of the frontend repository.
 ## Example usage
 
 ```
-uses: interdiscount/github-actions-build-frontend-docker-image@main
+uses: interdiscount/github-actions-build-frontend-docker-image@v1
 with:
     image-name: microspot-frontend
     interdiscount-coop-user-pw: ${{ secrets.INTERDISCOUNT_COOP_USER_PW }}
