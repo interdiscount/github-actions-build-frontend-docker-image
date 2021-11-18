@@ -14,7 +14,7 @@ runs:
   using: composite
   steps:
     - name: Extract branch name on push
-      if: github.event_name == 'push'
+      if: github.event_name != 'pull_request'
       shell: bash
       run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/} | tr / -)" >> $GITHUB_ENV
       
